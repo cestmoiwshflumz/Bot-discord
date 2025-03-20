@@ -103,7 +103,7 @@ async def check_soundcloud():
             color=discord.Color.orange()
         )
         if new_sound["image"]:
-            embed.set_thumbnail(url=new_sound["image"])
+            embed.set_image(url=new_sound["image"])
         await channel.send(embed=embed)
 
 
