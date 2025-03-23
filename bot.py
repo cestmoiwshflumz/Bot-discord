@@ -57,7 +57,7 @@ async def check_spotify():
     if new_release:
         embed = discord.Embed(
             title="🚨 NOUVELLE SORTIE !",
-            description=f"🎵 **{new_release['name']}** est maintenant disponible !\n\n🔗 [Écouter sur Spotify]({new_release['url']})",
+            description=f"🎵 [**{new_release['name']}** est maintenant disponible !]({new_release['url']})\n\n🔗 [Écouter sur Spotify]({new_release['url']})",
             color=discord.Color.blue()
         )
         embed.set_image(url=new_release["cover"])  # Ajouter la cover
@@ -98,8 +98,8 @@ async def check_soundcloud():
     new_sound = soundcloud.check_for_new_sound()
     if new_sound:
         embed = discord.Embed(
-            title="🚨 NOUVEAU SON SUR SOUNDCLOUD !",
-            description=f"🎵 **{new_sound['title']}** vient de sortir !\n\n🔗 [Écouter sur SoundCloud]({new_sound['url']})",
+            title="🚨 NOUVELLE EXLU SUR SOUNDCLOUD !",
+            description=f"🎵 [**{new_sound['title']}** vient de sortir !]({new_sound['url']})\n\n🔗 [Écouter sur SoundCloud]({new_sound['url']})",
             color=discord.Color.orange()
         )
         if new_sound["image"]:
